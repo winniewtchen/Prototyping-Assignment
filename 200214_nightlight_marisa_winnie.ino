@@ -19,6 +19,10 @@ int hue[9];
 
 CRGB leds[NUM_LEDS];
 void setup() {
+  Serial.begin (9600);
+pinMode(trigPin, OUTPUT);
+pinMode(echoPin, INPUT);
+pinMode(DATA_PIN, OUTPUT);
   // put your setup code here, to run once:
    FastLED.addLeds<LED_TYPE,DATA_PIN,COLOR_ORDER>(leds, NUM_LEDS).setCorrection( TypicalLEDStrip );
 }
